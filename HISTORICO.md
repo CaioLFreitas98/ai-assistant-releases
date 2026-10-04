@@ -14,8 +14,30 @@ As notas detalhadas de cada versão também ficam em
 | 4 de outubro de 2026 | **1.0.1**: atualização automática |
 | 4 de outubro de 2026 | **1.0.2**: Google Calendar |
 | 4 de outubro de 2026 | **1.0.3**: vozes no tablet, resposta ao ser chamada e despedida |
+| 4 de outubro de 2026 | **1.1.0**: Especialistas e navegador controlado com Playwright |
 
 ---
+
+## 1.1.0 · 4 de outubro de 2026
+
+**Especialistas e um navegador mais esperto.**
+
+- **Especialistas da casa.** Além da personalidade (o jeito de falar), ela agora
+  tem jeitos de trabalhar por assunto: **Programador**, **Design** e
+  **Pesquisador** já vêm prontos. Cada um sabe como trabalhar, onde pesquisar,
+  quais ferramentas usar e o tamanho de modelo que precisa.
+- **Escolha sozinha pelo assunto.** "Tenho um bug nesse código" chama o
+  Programador; "cria um logo" chama o Design; "compare esses dois celulares"
+  chama o Pesquisador. Ele continua ativo enquanto o assunto seguir.
+- **"Modo design"** fixa um especialista e **"modo normal"** volta ao padrão. O
+  especialista ativo aparece no topo da janela.
+- **Crie os seus**: em **Especialistas** (Central de configurações ou Mais
+  opções) dá para ligar, desligar, editar e criar novos (Finanças, Estudos,
+  Cozinha...). Valem para todos da casa.
+- **Navegador controlado com Playwright.** Quando ela precisa mexer em um site
+  sozinha, usa o navegador que você usa (Opera GX, Chrome, Edge, Brave ou
+  Vivaldi), numa janela própria onde os logins ficam salvos. Ela vê os botões e
+  campos da página e clica pelo texto ("Entrar"), o que erra bem menos.
 
 ## 1.0.3 · 4 de outubro de 2026
 
@@ -115,5 +137,7 @@ navegador controlado e análises em paralelo.
 ## Próximos passos
 
 - Microsoft 365 / Outlook no calendário.
+- Especialistas, etapa 2: criar por voz e material de consulta por especialista.
+- Especialistas, etapa 3: sugestões de aprendizado aprovadas por você e vários especialistas no mesmo pedido.
 - Verificação do app pelo Google, para tirar o aviso de "app não verificado".
 - Testes com mais pessoas e aparelhos.

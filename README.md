@@ -62,11 +62,18 @@ Na página da [última versão](https://github.com/CaioLFreitas98/ai-assistant-r
 - Lembretes, tarefas e calendário (local, Google, iCloud ou CalDAV)
 - Caixa de entrada com as mensagens não lidas do WhatsApp
 
+### 🧑‍💼 Especialistas
+- **Programador**, **Design** e **Pesquisador** já vêm prontos
+- Escolhidos sozinhos pelo assunto, cada um com seu jeito de trabalhar
+- "Modo design" fixa um; "modo normal" volta ao padrão
+- Crie os seus (Finanças, Estudos, Cozinha...)
+
 </td>
 <td width="50%" valign="top">
 
 ### 💻 Computador
 - Abre programas, sites e pesquisas no navegador que já está aberto
+- Mexe em sites sozinha pelo seu navegador (Opera GX, Chrome, Edge...), clicando pelo texto dos botões
 - Vê a tela, clica, digita e usa atalhos
 - Controla música e volume
 - Organiza pastas e lê PDF, Word e TXT
@@ -177,7 +184,7 @@ A barra lateral tem:
 | 💬 **Conversa** | Mostra ou esconde o painel de chat |
 | ⌨️ **Automatizar tarefas** | Grava e executa macros de teclado e mouse |
 | 📅 **Próximos compromissos** | Agenda dos próximos 7 dias |
-| ⚙️ **Central de configurações** | Identidade, personalidade, cérebro, voz, áudio, vozes da casa, **calendário**, WhatsApp, permissões, conta e aplicativos, tudo num lugar |
+| ⚙️ **Central de configurações** | Identidade, personalidade, **especialistas**, cérebro, voz, áudio, vozes da casa, **calendário**, WhatsApp, permissões, conta e aplicativos, tudo num lugar |
 | ⋯ **Mais opções** | Os atalhos abaixo |
 
 No **⋯ Mais opções**:
@@ -196,6 +203,7 @@ No **⋯ Mais opções**:
 | **Vozes da casa** | Reconhecimento de quem está falando |
 | **WhatsApp** | Modo de conexão do WhatsApp |
 | **Permissões** | O que ela pode fazer sozinha (ver abaixo) |
+| **Especialistas** | Ligar, desligar, editar e criar especialistas |
 | **Adicionar aplicativos** | Programas que ela pode abrir por comando |
 | **Tablet / acesso remoto** | QR code para parear celular ou tablet |
 | **Exemplos de comandos** | Lista de coisas para pedir |
@@ -273,6 +281,18 @@ qual é a fórmula de Bhaskara?
 distância entre Cuiabá e Campo Grande
 modelo 3d de um cubo 40mm com furo 10mm
 crie duas engrenagens com um eixo
+```
+</details>
+
+<details>
+<summary><b>Especialistas</b></summary>
+
+```text
+tenho um bug nesse código python        (chama o Programador)
+cria um logo e uma paleta de cores      (chama o Design)
+compare o iPhone e o Galaxy             (chama o Pesquisador)
+modo design  /  modo programador  /  modo pesquisador
+modo normal
 ```
 </details>
 
