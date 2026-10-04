@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Assistant</title>
+<meta name="description" content="Assistente pessoal com voz para Windows, com app satélite para Android.">
+<link rel="icon" href="icon.png">
+<style>
+  :root { --bg:#07090d; --surface:#0b0f15; --raised:#161c26; --text:#e7ecf3; --text2:#a9b3c1; --accent:#5cc8ff; --border:rgba(255,255,255,.08); }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font:16px/1.6 "Segoe UI", system-ui, sans-serif; }
+  main { max-width:860px; margin:0 auto; padding:56px 16px 40px; }
+  header { text-align:center; }
+  header img { width:112px; height:112px; border-radius:24px; }
+  h1 { font-size:2.4rem; margin:18px 0 6px; letter-spacing:-.5px; }
+  .lead { color:var(--text2); font-size:1.15rem; max-width:620px; margin:0 auto 28px; }
+  .cta { display:inline-block; background:var(--accent); color:#04121b; font-weight:700; padding:12px 26px; border-radius:12px; text-decoration:none; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px; margin:48px 0; }
+  .card { background:var(--surface); border:1px solid var(--border); border-radius:16px; padding:20px; }
+  .card h2 { font-size:1.05rem; margin:0 0 6px; }
+  .card p { margin:0; color:var(--text2); font-size:.95rem; }
+  section h2 { font-size:1.3rem; }
+  section p, section li { color:var(--text2); }
+  a { color:var(--accent); }
+  footer { border-top:1px solid var(--border); margin-top:48px; padding-top:20px; color:var(--text2); font-size:.9rem; text-align:center; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <img src="icon.png" alt="Ícone do AI Assistant">
+    <h1>AI Assistant</h1>
+    <p class="lead">Uma assistente pessoal com voz para o seu PC com Windows, que você mesmo batiza. Ela conversa, organiza o seu dia, controla o computador e a casa, e responde também pelo celular ou tablet.</p>
+    <a class="cta" href="https://github.com/CaioLFreitas98/ai-assistant-releases/releases/latest">Baixar a última versão</a>
+  </header>
+
+  <div class="grid">
+    <div class="card"><h2>🎙️ Voz</h2><p>Conversa em tempo real, atende pelo nome e reconhece quem está falando.</p></div>
+    <div class="card"><h2>📅 Agenda</h2><p>Resumo do dia, lembretes e eventos no calendário local, Google, Microsoft, iCloud ou CalDAV.</p></div>
+    <div class="card"><h2>💻 Computador</h2><p>Abre programas e sites, lê documentos, organiza pastas e grava macros.</p></div>
+    <div class="card"><h2>🏠 Casa e mensagens</h2><p>Home Assistant e WhatsApp, com permissões que você controla.</p></div>
+  </div>
+
+  <section>
+    <h2>Como o app usa o Google Calendar</h2>
+    <p>Se você escolher conectar o Google Calendar, o AI Assistant pede permissão para ver, criar e cancelar eventos das suas agendas. Ele usa isso só quando você pede, para dizer seus próximos compromissos, avisar quando um evento está chegando e criar ou cancelar eventos. O acesso fica guardado no Cofre de credenciais do Windows, no seu próprio PC, e você pode desconectar quando quiser.</p>
+    <p>Todos os detalhes estão na <a href="privacidade.html">Política de Privacidade</a>.</p>
+  </section>
+
+  <footer>
+    AI Assistant, desenvolvido por Caio Freitas ·
+    <a href="privacidade.html">Política de Privacidade</a> ·
+    <a href="https://github.com/CaioLFreitas98/ai-assistant-releases">GitHub</a> ·
+    <a href="mailto:caio.freitas2598@gmail.com">Contato</a>
+  </footer>
+</main>
+</body>
+</html>

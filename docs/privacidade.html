@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de Privacidade · AI Assistant</title>
+<link rel="icon" href="icon.png">
+<style>
+  :root { --bg:#07090d; --surface:#0b0f15; --text:#e7ecf3; --text2:#a9b3c1; --accent:#5cc8ff; --border:rgba(255,255,255,.08); }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font:16px/1.65 "Segoe UI", system-ui, sans-serif; }
+  main { max-width:780px; margin:0 auto; padding:48px 16px 40px; }
+  .top { display:flex; align-items:center; gap:12px; margin-bottom:8px; }
+  .top img { width:40px; height:40px; border-radius:10px; }
+  .top a { color:var(--text); text-decoration:none; font-weight:700; }
+  h1 { font-size:2rem; margin:24px 0 4px; }
+  h2 { font-size:1.2rem; margin-top:36px; }
+  p, li { color:var(--text2); }
+  strong { color:var(--text); }
+  a { color:var(--accent); }
+  .box { background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:4px 20px; }
+  hr { border:0; border-top:1px solid var(--border); margin:48px 0 24px; }
+  .muted { font-size:.9rem; }
+</style>
+</head>
+<body>
+<main>
+  <div class="top"><img src="icon.png" alt=""><a href="index.html">AI Assistant</a></div>
+  <h1>Política de Privacidade</h1>
+  <p class="muted">Última atualização: 4 de outubro de 2026</p>
+
+  <p>O AI Assistant é um aplicativo para Windows (com um app satélite opcional para Android) desenvolvido por Caio Freitas. Esta política explica quais dados o app acessa, como usa, onde guarda e com quem compartilha, em especial os dados das contas Google e Microsoft que você decidir conectar.</p>
+
+  <div class="box">
+    <p><strong>Resumo:</strong> o app roda no seu computador. O desenvolvedor não tem servidor que receba seus dados: conversas, memórias, configurações e acessos às suas contas ficam no seu PC. O que você pede à assistente vai para o provedor de IA que <em>você</em> configurou, só para gerar a resposta.</p>
+  </div>
+
+  <h2>1. Dados do Google Calendar (e do Microsoft Outlook/365)</h2>
+  <p>Conectar um calendário é opcional. Ao conectar, o app pede a permissão <strong>"Ver e editar eventos em todas as suas agendas"</strong> (<code>calendar.events</code>) do Google, ou <strong>Calendars.ReadWrite</strong> da Microsoft, e usa esse acesso para:</p>
+  <ul>
+    <li>ler seus próximos eventos (título, horário e local) para responder perguntas como "como está meu dia?" e montar o resumo diário;</li>
+    <li>avisar por voz quando um compromisso está chegando, se você ativar os avisos;</li>
+    <li>criar um evento quando você pede (ex.: "crie uma reunião amanhã às 14h");</li>
+    <li>cancelar um evento quando você pede, se a permissão de ações destrutivas estiver liberada no app.</li>
+  </ul>
+  <p>O app não lê convidados, anexos nem descrições para outros fins, não modifica eventos que você não pediu e não acessa nenhum outro dado da sua conta Google ou Microsoft.</p>
+
+  <h2>2. Onde os dados ficam</h2>
+  <ul>
+    <li><strong>Acesso às contas (tokens OAuth):</strong> guardado no Cofre de credenciais do Windows, no seu usuário, neste PC. Nunca em arquivo de texto e nunca enviado ao desenvolvedor.</li>
+    <li><strong>Eventos:</strong> são consultados direto do Google ou da Microsoft quando necessários. O app não mantém uma cópia da sua agenda.</li>
+    <li><strong>Conversas, memórias e configurações:</strong> ficam na pasta do app no seu PC (<code>%LOCALAPPDATA%\Programs\AI Assistant</code>).</li>
+  </ul>
+
+  <h2>3. Com quem os dados são compartilhados</h2>
+  <ul>
+    <li><strong>Provedor de IA escolhido por você</strong> (por exemplo OpenAI, Google Gemini, Anthropic ou um modelo local como o Ollama): quando você faz um pedido que envolve a agenda, os dados do evento necessários para responder (como título e horário) são enviados a esse provedor junto com o seu pedido, só para gerar a resposta. A chave de API é sua, e o uso segue os termos do provedor que você escolheu. Com um modelo local, nada sai do seu PC.</li>
+    <li><strong>Mais ninguém.</strong> O desenvolvedor não recebe, vende, aluga nem compartilha seus dados, e não usa nenhum dado para publicidade.</li>
+  </ul>
+
+  <h2>4. Uso limitado dos dados do Google</h2>
+  <p>O uso e a transferência, para qualquer outro app, de informações recebidas das APIs do Google seguem a <a href="https://developers.google.com/terms/api-services-user-data-policy">Política de Dados do Usuário dos Serviços de API do Google</a>, incluindo os requisitos de Uso Limitado. Os dados do Google são usados só para oferecer as funções da agenda que você vê e pede no app. Eles não são usados para treinar modelos de inteligência artificial, não são lidos por pessoas (exceto com o seu consentimento explícito, por segurança ou por exigência legal) e não são transferidos a terceiros fora dos casos descritos acima.</p>
+
+  <h2>5. Como desconectar e apagar</h2>
+  <ul>
+    <li>No app: <strong>Central de configurações → Calendário → Desconectar</strong>. O acesso é apagado do Cofre do Windows.</li>
+    <li>Na sua conta: revogue o acesso em <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a> (Google) ou <a href="https://account.microsoft.com/privacy/app-access">account.microsoft.com/privacy/app-access</a> (Microsoft).</li>
+    <li>Para apagar tudo do PC, desinstale o app e remova a pasta <code>%LOCALAPPDATA%\Programs\AI Assistant</code>.</li>
+  </ul>
+
+  <h2>6. Outros dados</h2>
+  <p>Voz, microfone, tela, WhatsApp e Home Assistant são usados só quando você ativa essas funções e só para atender aos seus pedidos. O processamento acontece no seu PC ou no provedor que você configurou. Registros de erro ficam no seu PC e só chegam ao desenvolvedor se você enviá-los.</p>
+
+  <h2>7. Crianças</h2>
+  <p>O app não é direcionado a menores de 13 anos.</p>
+
+  <h2>8. Mudanças e contato</h2>
+  <p>Mudanças nesta política são publicadas nesta página, com a data atualizada. Dúvidas ou pedidos: <a href="mailto:caio.freitas2598@gmail.com">caio.freitas2598@gmail.com</a>.</p>
+
+  <hr>
+  <h2>English summary</h2>
+  <p>AI Assistant runs locally on the user's Windows PC; the developer operates no server that receives user data. When a user connects Google Calendar, the app requests the <code>calendar.events</code> scope to read upcoming events, announce reminders, and create or cancel events only at the user's request. OAuth tokens are stored in the Windows Credential Manager on the user's device. Event details needed to answer a request may be sent, together with that request, to the AI provider the user configured with their own API key. Google user data is not sold, used for advertising, used to train AI models, or shared with anyone else. AI Assistant's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements. Contact: <a href="mailto:caio.freitas2598@gmail.com">caio.freitas2598@gmail.com</a>.</p>
+</main>
+</body>
+</html>
