@@ -15,6 +15,8 @@ e responde também pelo celular ou tablet.
 
 ### [⬇️ Baixar a última versão](https://github.com/CaioLFreitas98/ai-assistant-releases/releases/latest)
 
+[📜 Cronograma de tudo o que mudou](HISTORICO.md)
+
 </div>
 
 ---
@@ -43,8 +45,9 @@ Na página da [última versão](https://github.com/CaioLFreitas98/ai-assistant-r
 
 ### 🎙️ Voz
 - Conversa por voz em tempo real, que pode ser interrompida no meio da fala
-- Atende quando você diz o nome dela, com detecção local
-- Reconhece quem está falando (**Vozes da casa**)
+- Atende quando você diz o nome dela e responde ("Pode falar.") para você saber que foi ouvido
+- Encerra quando você se despede ("tchau", "era só isso", "valeu")
+- Reconhece quem está falando (**Vozes da casa**), também pelo tablet
 - Fala com Piper (offline), OpenAI, Gemini ou ElevenLabs
 - Português do Brasil e de Portugal, inglês, espanhol, francês, alemão e italiano
 
@@ -188,7 +191,7 @@ No **⋯ Mais opções**:
 | **Editar personalidade** | Define tom, estilo e preferências dela |
 | **O que ela sabe** | Ver, corrigir, adicionar e apagar memórias e pendências |
 | **API e modelos** | Provedor, chave e escolha automática ou manual de modelos |
-| **Voz e ativação** | Voz, idioma, tempo real, palavra de ativação e casa inteligente |
+| **Voz e ativação** | Voz, idioma, tempo real, palavra de ativação, resposta ao ser chamada e casa inteligente |
 | **Áudio e microfone** | Dispositivos, nível, calibração e teste da ativação |
 | **Vozes da casa** | Reconhecimento de quem está falando |
 | **WhatsApp** | Modo de conexão do WhatsApp |
@@ -280,7 +283,17 @@ crie duas engrenagens com um eixo
 mude sua voz para marin
 pare de falar  /  pode voltar a falar
 mostre toda a minha memória
-encerrar conversa
+```
+
+Para encerrar a conversa, é só falar natural. Ela se despede e para de ouvir
+até você chamar de novo:
+
+```text
+tchau  /  até mais  /  até amanhã
+obrigado, era só isso
+valeu, Luna
+deixa pra lá
+pode parar de ouvir
 ```
 </details>
 
@@ -448,5 +461,5 @@ Credenciais** do Windows e podem ser removidas por lá.
 
 <div align="center">
 <sub>O código-fonte é privado por enquanto. Este repositório guarda só os instaladores.<br>
-Novidades de cada versão: <a href="https://github.com/CaioLFreitas98/ai-assistant-releases/releases">Releases</a>.</sub>
+Novidades de cada versão: <a href="https://github.com/CaioLFreitas98/ai-assistant-releases/releases">Releases</a> · <a href="HISTORICO.md">Cronograma completo</a>.</sub>
 </div>
