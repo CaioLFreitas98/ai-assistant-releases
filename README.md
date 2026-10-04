@@ -56,7 +56,7 @@ Na página da [última versão](https://github.com/CaioLFreitas98/ai-assistant-r
 
 ### ☀️ Seu dia
 - Resumo da manhã com clima, agenda, lembretes e pendências
-- Lembretes, tarefas e calendário (local, iCloud ou CalDAV)
+- Lembretes, tarefas e calendário (local, Google, iCloud ou CalDAV)
 - Caixa de entrada com as mensagens não lidas do WhatsApp
 
 </td>
@@ -351,9 +351,15 @@ Em **⚙️ Central de configurações → Calendário**:
 | Provedor | O que precisa |
 |---|---|
 | **Local** | Nada, funciona na hora |
+| **Google Calendar** | Clique em **Conectar Google Calendar** e entre com sua conta (veja a nota abaixo) |
 | **iCloud** | Usuário Apple e uma *senha específica de app* |
 | **CalDAV** | URL HTTPS, usuário e senha de aplicativo |
-| Google / Microsoft 365 | Ainda exigem configuração avançada (Client ID OAuth próprio) |
+| Microsoft 365 / Outlook | Ainda não disponível nesta versão |
+
+> [!NOTE]
+> O Google ainda não concluiu a verificação do app. No login aparece **"O Google não verificou este app"**:
+> clique em **Avançado → Acessar AI Assistant (não seguro)** e depois em **Continuar**. O app só pede acesso
+> aos eventos da agenda. Detalhes na [Política de Privacidade](https://caiolfreitas98.github.io/ai-assistant-releases/privacidade.html).
 
 </details>
 
