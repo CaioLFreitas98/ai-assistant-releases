@@ -15,6 +15,30 @@ As notas detalhadas de cada versão também ficam em
 | 4 de outubro de 2026 | **1.0.2**: Google Calendar |
 | 4 de outubro de 2026 | **1.0.3**: vozes no tablet, resposta ao ser chamada e despedida |
 | 4 de outubro de 2026 | **1.1.0**: Especialistas e navegador controlado com Playwright |
+| 7 de outubro de 2026 | **1.5.0**: servidor da casa (Linux e Windows 11), PC no modo Cliente e uso fora de casa |
+
+---
+
+## 1.5.0 · 7 de outubro de 2026
+
+**A assistente vira o servidor da casa.**
+
+- **Servidor da casa.** A assistente pode rodar num computador sempre ligado, sem
+  janela: um notebook com Linux (pacote com instalador e serviço que liga
+  sozinho) ou um PC com Windows 11. Tablets, celulares e PCs falam com ele.
+- **PC no modo Cliente.** O PC que você usa vira a janela, o microfone e a caixa
+  de som do servidor. Todas as telas de configuração continuam as mesmas e
+  mudam o servidor; microfone, saída de som e ativação ficam no PC.
+- **Ações no PC pelo servidor.** Abrir programas, olhar a tela, clicar, mexer em
+  arquivos e no navegador acontecem no PC, mesmo quando o pedido vem do tablet.
+- **Voz em tempo real no Cliente**, com uma chave temporária: a chave da OpenAI
+  fica só no servidor.
+- **WhatsApp e agenda no servidor**, com o QR do WhatsApp no terminal ou no PC.
+- **Fora de casa** com o Tailscale: o celular e o notebook falam com a
+  assistente na rua, sem abrir portas no roteador; o notebook troca sozinho
+  entre a rede de casa e o Tailscale.
+- **Aparelhos pareados**: veja e remova tablets, celulares e PCs.
+- **Atualização automática do servidor**, no Linux e no Windows.
 
 ---
 

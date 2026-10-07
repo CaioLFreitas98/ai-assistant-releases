@@ -12,6 +12,7 @@ e responde também pelo celular ou tablet.
 [![Downloads](https://img.shields.io/github/downloads/CaioLFreitas98/ai-assistant-releases/total?label=downloads&color=3ddc97&style=flat-square)](https://github.com/CaioLFreitas98/ai-assistant-releases/releases)
 ![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011-0b0f15?style=flat-square&logo=windows)
 ![Android](https://img.shields.io/badge/Android-8.0%2B-0b0f15?style=flat-square&logo=android)
+![Linux](https://img.shields.io/badge/Servidor-Linux%20%7C%20Windows%2011-0b0f15?style=flat-square&logo=linux)
 
 ### [⬇️ Baixar a última versão](https://github.com/CaioLFreitas98/ai-assistant-releases/releases/latest)
 
@@ -29,11 +30,12 @@ Na página da [última versão](https://github.com/CaioLFreitas98/ai-assistant-r
 |---|---|---|
 | `AI-Assistant-<versão>-Setup.exe` | **PC com Windows**: a assistente completa | ~600 MB |
 | `AI-Assistant-<versão>-Android.apk` | **Celular ou tablet** (opcional): fala com a assistente do PC pelo Wi-Fi | ~80 MB |
-| `AI-Assistant-<versão>-Setup.exe.sha256` | Checksum do instalador (usado pelas atualizações automáticas) | — |
+| `ai-assistant-server-<versão>-linux-x64.tar.gz` | **Servidor da casa no Linux** (opcional): a assistente sempre ligada, sem janela | ~700 MB |
+| `*.sha256` | Checksums (usados pelas atualizações automáticas) | — |
 
 > [!NOTE]
 > Versão beta. O app do Android **não funciona sozinho**: ele é um "satélite" da assistente
-> que roda no PC. Instale primeiro no Windows.
+> que roda no PC ou no servidor da casa. Instale primeiro no Windows (ou o servidor).
 
 ---
 
@@ -322,7 +324,7 @@ pode parar de ouvir
 ## Celular e tablet (Android)
 
 O app transforma um celular ou tablet num "satélite" da assistente: você fala com ele e quem
-responde é a assistente do PC, pelo Wi-Fi de casa. No tablet deitado, a tela fica igual à do PC.
+responde é a assistente do PC (ou do [servidor da casa](#servidor-da-casa-opcional)), pelo Wi-Fi de casa. No tablet deitado, a tela fica igual à do PC.
 Ele também atende quando você diz **"Luna"**, sem tocar na tela.
 
 1. **No PC:** **⋯ Mais opções → Tablet / acesso remoto**. Na primeira vez, marque
@@ -337,6 +339,78 @@ Ele também atende quando você diz **"Luna"**, sem tocar na tela.
 > O QR vale uma única vez e expira em 5 minutos. PC e celular precisam estar **no mesmo Wi-Fi**.
 > Use só em redes de confiança, como a de casa: a conexão na rede local não é criptografada.
 > **Nunca** abra a porta 8000 do roteador para a internet.
+
+---
+
+## Servidor da casa (opcional)
+
+Quem tem um computador **sempre ligado** (um notebook com Linux ou um PC com Windows 11) pode
+deixar a assistente rodando nele, sem janela, e usar os outros aparelhos como "tela e microfone":
+
+| Modo | Para quem | O que roda |
+|---|---|---|
+| **Tudo em um** (padrão) | Quem só tem um PC | Tudo neste PC, como sempre |
+| **Servidor** | Notebook ou PC sempre ligado | A assistente, sem janela; liga sozinha com o computador |
+| **Cliente** | O PC que você usa | Janela, microfone e caixa de som, ligados ao servidor |
+
+Não precisa de placa de vídeo: com o cérebro por API (OpenAI, Claude, Gemini...), 4 GB de RAM livres bastam.
+
+<details>
+<summary><b>Servidor no Linux (Ubuntu 24.04 ou parecido)</b></summary>
+
+<br>
+
+```bash
+tar xzf ai-assistant-server-<versão>-linux-x64.tar.gz
+cd ai-assistant-server-<versão>-linux-x64
+sudo ./install.sh
+```
+
+Na primeira vez ele pergunta o nome da IA, o provedor e a chave de API. Depois:
+
+| Comando | Para quê |
+|---|---|
+| `ai-assistant-server parear` | QR para tablet/celular e o código de 6 dígitos para o PC |
+| `ai-assistant-server whatsapp` | QR de login do WhatsApp, no terminal |
+| `ai-assistant-server aparelhos` / `remover <id>` | Ver e desfazer pareamentos |
+| `ai-assistant-server configurar` | Trocar nome, cérebro ou chave |
+| `sudo ai-assistant-server atualizar` | Atualizar na hora (ele também se atualiza sozinho, de madrugada) |
+
+</details>
+
+<details>
+<summary><b>Servidor no Windows 11</b></summary>
+
+<br>
+
+Instale normalmente e marque **Rodar como servidor (sem janela) ao entrar no Windows**. Abrindo o
+AI Assistant nesse mesmo PC, a janela já se liga ao servidor: dali saem o QR e o código para parear
+os outros aparelhos. Ele também se atualiza sozinho.
+
+</details>
+
+**No PC que você usa:** ⋯ **Mais opções → Modo deste PC (servidor da casa)**, informe o endereço e o
+código de 6 dígitos. O app reabre ligado ao servidor.
+
+- Todas as telas de configuração continuam iguais e mudam o servidor (chaves, voz, agenda, WhatsApp,
+  permissões, memória). Microfone, saída de som e palavra de ativação ficam no PC.
+- Pedidos como "abre o VS Code", "o que tem na minha tela?" ou mexer em arquivos e no navegador
+  acontecem no PC, mesmo quando pedidos pelo tablet. Com o PC desligado, ela avisa.
+- A voz em tempo real funciona no PC; a chave da OpenAI nunca sai do servidor.
+- O WhatsApp do servidor conecta pelo QR em **WhatsApp → Conectar WhatsApp (QR)**.
+
+## Fora de casa (Tailscale)
+
+Para usar no celular ou no notebook na rua, instale o [Tailscale](https://tailscale.com/download)
+(gratuito) no servidor, no celular e no notebook, **na mesma conta**. É uma rede privada e
+criptografada: não precisa abrir nenhuma porta no roteador.
+
+- **Celular:** em **Tablet / acesso remoto**, escolha **Em casa e fora de casa (celular com
+  Tailscale)** e escaneie o QR (no Linux: `ai-assistant-server parear fora`).
+- **Notebook (modo Cliente):** troca sozinho entre a rede de casa e o Tailscale.
+
+> [!WARNING]
+> **Nunca** abra a porta da assistente (8000) no roteador. Fora de casa, use só o Tailscale.
 
 ---
 
